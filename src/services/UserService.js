@@ -336,7 +336,7 @@ const getDetailsUser = (id) => {
       const user = await User.findOne({
         _id: id,
       })
-        .select("-password")
+        .select("-password") 
         .populate({
           path: "role",
           select: "name permissions",
